@@ -6,10 +6,39 @@ $blue: #42567A;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 530px;
+  width: 536px;
+}
+
+.circle {
   border: 1px solid $blue;
   border-radius: 50%;
   height: 530px;
   width: 536px;
+}
+
+.circle__point {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+  background: $blue;
+  border-radius: 100%;
+
+  &.index0 {
+    top: 7%;
+    left: 77%;
+  }
+
+  &.index1 {
+    top: 94%;
+    left: 72%;
+  }
+
+  &.index2 {
+    top: 47%;
+    left: -1%;
+  }
 }
 
 .container__circle-slide {
@@ -33,5 +62,19 @@ $blue: #42567A;
   span {
     margin: 0;
     padding: 0;
+  }
+
+  opacity: 1;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.points__container {
+  opacity: 0;
+
+  &.hidden {
+    opacity: 1;
   }
 }
