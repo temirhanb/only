@@ -1,0 +1,20 @@
+.header__title {
+  display: flex;
+  position: absolute;
+  height: 120px;
+  margin-top: 170px;
+
+  div {
+    width: 6px;
+    background: linear-gradient(#3877EE, #EF5DA8);
+  }
+
+  h1 {
+    font-size: 56px;
+    font-weight: bold;
+    width: 350px;
+    color: #42567A;
+    margin: 0 0 0 78px;
+    line-height: 120%;
+  }
+}

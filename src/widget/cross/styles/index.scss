@@ -1,0 +1,19 @@
+.line__y-page {
+  width: 1px;
+  background: #42567A;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line__x-page {
+  height: 1px;
+  background: #42567A;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

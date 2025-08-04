@@ -1,0 +1,37 @@
+$white: #f4f5f9;
+$blue: #42567A;
+
+.container__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid $blue;
+  border-radius: 50%;
+  height: 530px;
+  width: 536px;
+}
+
+.container__circle-slide {
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  border: 1px solid $blue;
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $blue;
+  text-align: center;
+  background: #f4f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin: 0;
+    padding: 0;
+  }
+}
