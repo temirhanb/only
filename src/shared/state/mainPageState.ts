@@ -20,8 +20,40 @@ type TAction = {
 
 const initialState: TStore = {
   currentSlide: 1,
-  slides: 2,
+  slides: 3,
   data: [
+    {
+      0: {
+        data: 2010,
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
+      },
+      1: {
+        data: 2011,
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
+      },
+      2: {
+        data: 2012,
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
+      },
+      3: {
+        data: 2013,
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
+      },
+      4: {
+        data: 2014,
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
+      },
+    },
     {
       0: {
         data: 2015,
@@ -43,15 +75,21 @@ const initialState: TStore = {
     {
       0: {
         data: 2019,
-        title: "news 2019"
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
       },
       1: {
         data: 2020,
-        title: "news 2020"
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
       },
       2: {
         data: 2021,
-        title: "news 2021"
+        title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been " +
+          "the industry's standard dummy text ever since the 1500s, when an unknown printer took a " +
+          "galley of type and scrambled it to make a type specimen book."
       },
     },
   ]

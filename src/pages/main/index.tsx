@@ -1,7 +1,11 @@
 import React from "react";
+import {register} from "swiper/element/bundle";
 import {CrossComponent, Header, SwiperHistory} from "../../widget";
-import "./style/index.scss";
 import {CircleComponent} from "../../widget/circle";
+import "./style/index.scss";
+import {YearsSwiper} from "../../widget/yearsSwiper";
+
+register();
 
 export const MainPage: React.FC = () => {
 
@@ -11,6 +15,7 @@ export const MainPage: React.FC = () => {
         <Header/>
         <CrossComponent/>
         <CircleComponent/>
+        <YearsSwiper/>
         <SwiperHistory/>
       </div>
     </main>
