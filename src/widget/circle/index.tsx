@@ -3,11 +3,11 @@ import "./styles/index.scss";
 import {useCircleComponentHook} from "./hook/useCircleComponentHook";
 
 export const CircleComponent: React.FC = () => {
-  const {circleRef, data, handlerSetSlide, pointsRef, currentSlide} = useCircleComponentHook();
+  const {circleRef, data, handlerSetSlide,  currentSlide} = useCircleComponentHook();
   return (
     <div className={"container__circle"} onClick={() => console.log("22click")}>
       <div ref={circleRef} className={"circle"}>
-        <div ref={pointsRef} className={`points__container`}>
+        <div  className={`points__container`}>
           {data.map((_, index) => (
             <div
               key={index + "point-container"}
@@ -16,7 +16,7 @@ export const CircleComponent: React.FC = () => {
             >
               <div className={`container__circle-slide ${index === currentSlide ? "active" : ""}`}>
                 <div className={`container__circle-point ${"index" + index}`}/>
-                <span>{index + 1}</span>
+                <span className={'circle__span-'+index}>{index + 1}</span>
               </div>
             </div>
           ))}

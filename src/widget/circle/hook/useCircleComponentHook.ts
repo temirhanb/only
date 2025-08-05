@@ -10,6 +10,7 @@ export const useCircleComponentHook = ()=>{
   const pointsRef = useRef(null);
 
   const [_, setRotation] = useState(0);
+
   useGSAP(() => {
     gsap.to(circleRef.current, {
       x: currentSlide,

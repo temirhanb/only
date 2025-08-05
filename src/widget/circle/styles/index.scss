@@ -46,7 +46,12 @@ $blue: #42567A;
       justify-content: center;
       align-items: center;
       opacity: 0;
-
+      .circle__span-1{
+        transform: rotate(120deg);
+      }
+      .circle__span-2{
+        transform: rotate(20deg);
+      }
       &:hover {
         opacity: 1;
         transition: opacity 1s ease-in-out;
@@ -80,6 +85,15 @@ $blue: #42567A;
 
 .container__circle-slide {
 
+  .circle__span-0{
+    transform: rotate(240deg);
+  }
+  .circle__span-1{
+    transform: rotate(120deg);
+  }
+  .circle__span-2{
+    transform: rotate(20deg);
+  }
   .container__circle-point {
     position: absolute;
     width: 10px;
@@ -101,6 +115,7 @@ $blue: #42567A;
     .container__circle-point {
       opacity: 0;
     }
+
   }
 
   span {
@@ -135,6 +150,7 @@ $blue: #42567A;
       }
 
     }
+
 
     span {
       opacity: 1;
