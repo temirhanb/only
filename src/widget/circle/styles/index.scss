@@ -2,6 +2,7 @@ $white: #f4f5f9;
 $blue: #42567A;
 
 .container__circle {
+  z-index: 10;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,7 +10,7 @@ $blue: #42567A;
   height: 530px;
   width: 536px;
   @media screen and (max-width: 720px) {
-    display:none;
+    display: none;
   }
 }
 
@@ -22,62 +23,128 @@ $blue: #42567A;
 
 .circle__point {
   position: absolute;
-
-  width: 10px;
-  height: 10px;
-  background: $blue;
+  cursor: pointer;
+  z-index: 10;
+  width: 56px;
+  height: 56px;
   border-radius: 100%;
 
+
+  &:hover {
+    .container__circle-slide {
+      border: 1px solid $blue;
+      border-radius: 50%;
+      height: 56px;
+      width: 56px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      color: $blue;
+      text-align: center;
+      background: #f4f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+      }
+
+      span {
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
   &.index0 {
-    top: 7%;
-    left: 77%;
+    top: 47%;
+    left: -5%;
+
   }
 
   &.index1 {
-    top: 94%;
+    top: 85%;
     left: 72%;
   }
 
   &.index2 {
-    top: 47%;
-    left: -1%;
+    top: 7%;
+    left: 77%;
   }
 }
 
 .container__circle-slide {
-  position: absolute;
-  top: 5%;
-  left: 75%;
-  border: 1px solid $blue;
-  border-radius: 50%;
-  height: 56px;
-  width: 56px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  color: $blue;
-  text-align: center;
-  background: #f4f5f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  .container__circle-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 39%;
+    top: 34%;
+    margin: auto;
+    background: $blue;
+    border-radius: 100%;
+    opacity: 1;
+
+    &.index1 {
+      left: 39%;
+      top: 58%;
+    }
+  }
+
+  &:hover {
+    .container__circle-point {
+      opacity: 0;
+    }
+  }
 
   span {
+    opacity: 0;
     margin: 0;
     padding: 0;
   }
 
-  opacity: 1;
+  &.active {
+    opacity: 1;
+    border: 1px solid $blue;
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $blue;
+    text-align: center;
+    background: #f4f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  &.hidden {
-    opacity: 0;
+    .container__circle-point {
+      opacity: 0;
+    }
+
+    &:hover {
+      .container__circle-point {
+        opacity: 0;
+      }
+
+    }
+
+    span {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
 .points__container {
-  opacity: 0;
 
-  &.hidden {
-    opacity: 1;
-  }
 }

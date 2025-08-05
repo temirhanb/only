@@ -20,7 +20,7 @@ type TAction = {
 }
 
 const initialState: TStore = {
-  currentSlide: 1,
+  currentSlide: 0,
   slides: 3,
   data: [
     {

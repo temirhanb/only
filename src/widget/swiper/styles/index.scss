@@ -21,7 +21,7 @@ $gray: #C7CDD9;
 
   @media screen and (max-width: 720px) {
     position: relative;
-    top: 0;
+    top: 56px;
     margin-top: 56px;
     margin-left: 0;
     width: 100%;
@@ -96,13 +96,20 @@ $gray: #C7CDD9;
     line-height: 30px;
     color: $dark-blue;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and (max-width: 720px) {
+      -webkit-line-clamp: 6;
+    }
   }
 
   @media screen and (max-width: 720px) {
     height: 100%;
     width: 100%;
+    display: block;
+    overflow: auto;
   }
 }
 

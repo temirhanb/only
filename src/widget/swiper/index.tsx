@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import "./styles/index.scss";
 //@ts-ignore
@@ -9,47 +9,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import {Navigation} from "swiper/modules";
-import {useMainPageState} from "../../shared/state/mainPageState";
-import {gsap} from "gsap";
+import {useSwiperHook} from "./hook/useSwiperHook";
 
 export const SwiperHistory: React.FC = () => {
-
-  const {incrementSlide, setSlide, decrementSlide, data, currentSlide} = useMainPageState(state => state);
-
-  const slideViewRef = useRef(null);
-  useEffect(() => {
-
-    gsap.to(slideViewRef.current, {
-      duration: 1,
-      onUpdate: () => {
-        gsap.to(slideViewRef.current, {
-          opacity: 0,
-          duration: .3
-        });
-      },
-      onComplete: () => {
-        gsap.to(slideViewRef.current, {
-          opacity: 1,
-          duration: .3
-        });
-      }
-    });
-  }, [currentSlide]);
-
-  const handlerIncrementSlide = () => {
-
-    currentSlide < data.length - 1 && incrementSlide();
-  };
-
-  const handlerDecrementSlide = () => {
-    currentSlide > 0 && decrementSlide();
-  };
-
-  const handlerSetSlide = (index: number) => {
-    setSlide(index);
-  };
-
-  const screenWidth = window.screen.width;
+  const {
+    screenWidth,
+    currentSlide,
+    data,
+    handlerSetSlide,
+    handlerIncrementSlide,
+    handlerDecrementSlide,
+    slideViewRef
+  } = useSwiperHook();
 
   return (
     <div className={"swiper__container"}>
