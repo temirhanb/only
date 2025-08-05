@@ -16,6 +16,7 @@ type TStore = {
 type TAction = {
   incrementSlide: () => void;
   decrementSlide: () => void;
+  setSlide: (slide: number) => void;
 }
 
 const initialState: TStore = {
@@ -104,5 +105,8 @@ export const useMainPageState = create<TStore & TAction>((set) => ({
   })),
   decrementSlide: () => set((state) => ({
     currentSlide: state.currentSlide - 1
+  })),
+  setSlide: (slide) => set(() => ({
+    currentSlide: slide
   })),
 }));

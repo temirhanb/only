@@ -19,12 +19,20 @@ export const YearsSwiper: React.FC = () => {
 
     gsap.to(obj, {
       value: firstSlided,
-      duration: 2, // Animation duration in seconds
+      duration: 1, // Animation duration in seconds
+      ease: "power1.out", // Easing function
+      onUpdate: () => {
+        // Update the React state on each animation frame
+        setFirstYear(Math.round(obj.value));
+      },
+    });
+    gsap.to(obj, {
+      value: lastSlided,
+      duration: 1, // Animation duration in seconds
       ease: "power1.out", // Easing function
       onUpdate: () => {
         // Update the React state on each animation frame
         setLastYear(Math.round(obj.value));
-        setFirstYear(Math.round(obj.value));
       },
     });
   }, [firstSlided]);

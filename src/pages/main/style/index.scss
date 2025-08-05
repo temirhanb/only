@@ -7,8 +7,8 @@ $blue: #42567A;
   height: 1080px;
   width: 1920px;
   @media screen and (max-width: 720px) {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow-x: hidden;
   }
 }
@@ -27,8 +27,8 @@ $blue: #42567A;
     border: none;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
   }
 
 }
