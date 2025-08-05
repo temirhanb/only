@@ -7,6 +7,9 @@
   div {
     width: 6px;
     background: linear-gradient(#3877EE, #EF5DA8);
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
   }
 
   h1 {
@@ -16,5 +19,18 @@
     color: #42567A;
     margin: 0 0 0 78px;
     line-height: 120%;
+    @media screen and (max-width: 720px) {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 120%;
+      width: 100px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    position: static;
+    margin: 0;
+    height: 0;
   }
 }

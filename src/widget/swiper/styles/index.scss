@@ -1,6 +1,7 @@
 $light-blue: #3877EE;
 $dark-blue: #42567A;
 $white: #f4f5f9;
+$gray: #C7CDD9;
 
 .swiper__container {
   position: absolute;
@@ -17,9 +18,23 @@ $white: #f4f5f9;
     color: $dark-blue;
     margin-bottom: 20px;
   }
+
+  @media screen and (max-width: 720px) {
+    position: relative;
+    top: 0;
+    margin-top: 56px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-flow: column-reverse;
+  }
 }
 
 .swiper {
+  flex-direction: row;
+  height: 100%;
+
   .swiper-button-next {
     background: white;
     height: 40px;
@@ -28,6 +43,26 @@ $white: #f4f5f9;
 
     &:after {
       font-size: 10px;
+    }
+
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper {
+    @media screen and (max-width: 720px) {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 100%;
+      border-top: 1px solid $gray;
+    }
+  }
+  .swiper-slide {
+    @media screen and (max-width: 720px) {
+      margin-right: 25px;
+      height: 400px;
     }
   }
 
@@ -61,6 +96,11 @@ $white: #f4f5f9;
     color: $dark-blue;
     width: 400px;
   }
+
+  @media screen and (max-width: 720px) {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .swiper__button {
@@ -82,8 +122,15 @@ $white: #f4f5f9;
 
   &.disabled {
     border: 1px solid #42567A80;
-    img{
+
+    img {
       opacity: .8;
     }
   }
 }
+
+//.swiper__desc-button{
+//  @media screen and (max-width: 720px) {
+//    display: none;
+//  }
+//}

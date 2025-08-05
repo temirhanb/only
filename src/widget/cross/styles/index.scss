@@ -6,6 +6,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: 720px) {
+    display:none;
+  }
 }
 
 .line__x-page {
@@ -16,4 +19,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: 720px) {
+    display:none;
+  }
 }
