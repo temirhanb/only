@@ -5,7 +5,7 @@ import {useCircleComponentHook} from "./hook/useCircleComponentHook";
 export const CircleComponent: React.FC = () => {
   const {circleRef, data, handlerSetSlide,  currentSlide} = useCircleComponentHook();
   return (
-    <div className={"container__circle"} onClick={() => console.log("22click")}>
+    <div className={"container__circle"}>
       <div ref={circleRef} className={"circle"}>
         <div  className={`points__container`}>
           {data.map((_, index) => (

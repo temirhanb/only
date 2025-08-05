@@ -41,7 +41,6 @@ export const useCircleComponentHook = ()=>{
   }, [currentSlide]);
 
   const handlerSetSlide = (index: number) => {
-    console.log("click");
     setSlide(index);
   };
 
