@@ -14,7 +14,7 @@ export const useYearsSwiperHook = ()=>{
   const [lastYear, setLastYear] = useState(lastSlided);
 
   useEffect(() => {
-    const obj = {value: 2000};
+    const obj = {value:firstYear};
 
     gsap.to(obj, {
       value: firstSlided,
