@@ -8,7 +8,7 @@ $blue: #42567A;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 530px;
-  width: 536px;
+  width: 530px;
   @media screen and (max-width: 720px) {
     display: none;
   }
@@ -16,9 +16,9 @@ $blue: #42567A;
 
 .circle {
   border: 1px solid $blue;
-  border-radius: 50%;
+  border-radius: 100%;
   height: 530px;
-  width: 536px;
+  width: 530px;
 }
 
 .circle__point {
@@ -98,7 +98,7 @@ $blue: #42567A;
     position: absolute;
     width: 10px;
     height: 10px;
-    left: 40%;
+    left: 45%;
     top: 35%;
     margin: auto;
     background: $blue;
@@ -106,8 +106,12 @@ $blue: #42567A;
     opacity: 1;
 
     &.index1 {
-      left: 39%;
-      top: 25%;
+      left: 15%;
+      top: 15%;
+    }
+    &.index2 {
+      left: 37%;
+      top: 45%;
     }
   }
 
